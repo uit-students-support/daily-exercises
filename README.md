@@ -42,6 +42,24 @@ For example, you can ask for help with:
 
 The purpose of this support is to help you express your own understanding in English, not to replace your thinking or answer the exercise for you.
 
+## Daily Exercise Updates
+
+A new exercise will be added to the repository **each day** under the corresponding `day-xx` section.
+
+Before starting each new exercise, **remember to pull the latest changes from the `main` branch** to make sure you have the most up-to-date exercise.
+
+For example:
+
+```bash
+git checkout hauvq
+git pull origin main
+```
+
+Then complete the new exercise and submit it following the submission guidelines above.
+
+> [!IMPORTANT]
+> **Remember to pull the latest changes from `main` before starting each day's exercise.**
+
 ## Submission Guidelines
 
 ### 1. Answer the Questions
