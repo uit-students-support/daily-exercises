@@ -120,10 +120,7 @@ Modularity describes how well the document is divided into independent and logic
 
 **Component Separation**
 
-**Description:**
-Major components of the thesis should be separated into appropriate files or modules.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 Each major chapter is stored in a separate `.tex` file:
 
@@ -146,7 +143,7 @@ The main document then assembles these components:
 \include{chapters/conclusion}
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 All chapters are written directly inside one large `main.tex` file:
 
@@ -162,10 +159,7 @@ This makes the document difficult to navigate and modify as it becomes larger.
 
 **Single Responsibility**
 
-**Description:**
-Each file or module should have a clear and specific purpose instead of handling unrelated content.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 The file:
 
@@ -175,7 +169,7 @@ chapters/methodology.tex
 
 contains only the content of the methodology chapter.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 The file:
 
@@ -197,10 +191,7 @@ The file therefore has multiple unrelated responsibilities.
 
 **Logical Grouping**
 
-**Description:**
-Related files and resources should be grouped together in meaningful folders or modules.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 Architecture-related figures are grouped together:
 
@@ -220,7 +211,7 @@ figures/
     └── experiment-02.pdf
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 All resources are placed randomly in the project root:
 
@@ -240,10 +231,7 @@ There is no clear grouping of related resources.
 
 **Separation of Concerns**
 
-**Description:**
-Different responsibilities, such as document configuration, thesis content, figures, tables, and references, should be appropriately separated.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 Different responsibilities are separated:
 
@@ -256,7 +244,7 @@ references.bib     → bibliography
 appendices/        → appendices
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 A chapter file contains both thesis content and unrelated configuration:
 
@@ -279,14 +267,9 @@ Configuration and content are unnecessarily mixed together.
 
 ### Readability
 
-Readability describes how easily another person can understand the document structure and read the LaTeX source code.
-
 **Meaningful Naming**
 
-**Description:**
-Files, folders, labels, commands, and other identifiers should have clear and descriptive names.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 ```text
 literature-review.tex
@@ -300,7 +283,7 @@ A descriptive label can also be used:
 \label{fig:system-architecture}
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 ```text
 ch2.tex
@@ -321,10 +304,7 @@ These names provide little information about their purpose.
 
 **Clear Hierarchy**
 
-**Description:**
-The file and folder structure should clearly reflect the hierarchy of the thesis.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 ```text
 chapters/
@@ -339,7 +319,7 @@ chapters/
 
 The folder structure communicates the relationship between chapters and their components.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 ```text
 a/
@@ -355,10 +335,7 @@ The hierarchy does not communicate the structure of the thesis.
 
 **Structural Simplicity**
 
-**Description:**
-The project should avoid unnecessary files, folders, nesting, or structural complexity.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 A thesis with five major chapters uses a simple structure:
 
@@ -371,7 +348,7 @@ chapters/
 └── conclusion.tex
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 Every paragraph is placed in a separate file:
 
@@ -390,10 +367,7 @@ This introduces unnecessary complexity.
 
 **Consistency**
 
-**Description:**
-The same organizational and coding conventions should be followed throughout the project.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 All chapter files use lowercase kebab-case:
 
@@ -404,7 +378,7 @@ system-design.tex
 experimental-results.tex
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 The project uses inconsistent naming conventions:
 
@@ -420,10 +394,7 @@ RESULTS_new.tex
 
 **Code Formatting and Simplicity**
 
-**Description:**
-LaTeX source code should use consistent indentation, spacing, line breaks, and a simple coding style.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 ```latex
 \section{Experimental Setup}
@@ -437,7 +408,7 @@ The experiment consists of three components:
 \end{itemize}
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 ```latex
 \section{Experimental Setup}
@@ -453,10 +424,7 @@ Although both examples may compile, the first is easier to read and maintain.
 
 **Comments and Documentation**
 
-**Description:**
-Important or non-obvious code, configurations, and project conventions should be documented when necessary.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 ```latex
 % This command defines the notation used
@@ -466,7 +434,7 @@ Example that follows the criterion
 
 The comment explains the purpose of a non-obvious command.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 ```latex
 \newcommand{\Load}{L_i}
@@ -478,14 +446,9 @@ The command is important but its purpose is not documented.
 
 ### Maintainability
 
-Maintainability describes how easily the document can be modified, updated, or corrected without causing unnecessary changes elsewhere.
-
 **Change Isolation**
 
-**Description:**
-Changes to one component should be possible without unnecessarily modifying other components.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 To modify the methodology chapter, only this file needs to be changed:
 
@@ -493,7 +456,7 @@ To modify the methodology chapter, only this file needs to be changed:
 chapters/methodology.tex
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 A small change to the methodology requires modifications to:
 
@@ -511,10 +474,7 @@ This indicates strong coupling between components.
 
 **Centralized Configuration**
 
-**Description:**
-Shared settings, formatting rules, commands, and configurations should be defined in appropriate central locations.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 Shared configuration is placed in `preamble.tex`:
 
@@ -526,7 +486,7 @@ Shared configuration is placed in `preamble.tex`:
 \newcommand{\EKS}{Amazon Elastic Kubernetes Service (EKS)}
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 Each chapter independently defines shared packages and commands:
 
@@ -547,10 +507,7 @@ This creates unnecessary duplication.
 
 **Low Duplication**
 
-**Description:**
-Repeated content, commands, or configurations should be minimized and reused where appropriate.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 A frequently used term is defined once:
 
@@ -564,7 +521,7 @@ It can then be reused:
 \EKS
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 The full expression is repeatedly written and manually formatted throughout many files:
 
@@ -578,10 +535,7 @@ If the formatting or terminology changes, many files may need to be modified.
 
 **Dependency Management**
 
-**Description:**
-Dependencies between files, modules, packages, and configurations should be clear and appropriately managed.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 The dependency structure is straightforward:
 
@@ -595,7 +549,7 @@ main.tex
 
 The main document assembles the independent content modules.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 `results.tex` depends on commands defined inside `methodology.tex`, while `methodology.tex` also depends on definitions from `results.tex`.
 
@@ -611,14 +565,9 @@ This creates hidden or circular dependencies.
 
 ### Scalability
 
-Scalability describes how well the document structure can accommodate growth.
-
 **Easy Extension**
 
-**Description:**
-New chapters, sections, appendices, or other components should be added without major restructuring.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 To add a new chapter:
 
@@ -634,7 +583,7 @@ Then add:
 
 to `main.tex`.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 Adding one chapter requires restructuring the existing `main.tex` because all existing content is tightly coupled inside one large source file.
 
@@ -642,10 +591,7 @@ Adding one chapter requires restructuring the existing `main.tex` because all ex
 
 **Stable Structure**
 
-**Description:**
-The overall project structure should remain understandable as the thesis becomes larger.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 The project grows while preserving the same structure:
 
@@ -661,7 +607,7 @@ chapters/
 └── conclusion.tex
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 The project gradually becomes:
 
@@ -682,10 +628,7 @@ The structure becomes increasingly difficult to understand.
 
 **Resource Organization**
 
-**Description:**
-Figures, tables, references, appendices, and other resources should be added and organized systematically.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 ```text
 figures/
@@ -702,7 +645,7 @@ appendices/
 references.bib
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 ```text
 image1.png
@@ -720,10 +663,7 @@ All resources are mixed together without a systematic organization.
 
 **Consistent Growth**
 
-**Description:**
-The same organizational rules and conventions should continue to be applied as the project grows.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 Existing files:
 
@@ -738,7 +678,7 @@ A new chapter follows the same convention:
 chapters/discussion.tex
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 The project initially uses:
 
@@ -761,14 +701,9 @@ The naming convention becomes inconsistent.
 
 ### Collaboration
 
-Collaboration describes how easily multiple people can work on different parts of the document while minimizing conflicts.
-
 **Work Separation**
 
-**Description:**
-Different contributors should be able to work on different components of the thesis.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 ```text
 Contributor A → introduction.tex
@@ -778,7 +713,7 @@ Contributor C → experiments.tex
 
 Each contributor works primarily on a different module.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 All contributors must edit:
 
@@ -792,10 +727,7 @@ because the entire thesis is stored in one file.
 
 **Conflict Reduction**
 
-**Description:**
-The structure should minimize situations where multiple contributors need to modify the same file.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 ```text
 Alice → chapters/methodology.tex
@@ -804,7 +736,7 @@ Bob   → chapters/experiments.tex
 
 Because the contributors work on different files, the probability of Git merge conflicts is reduced.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 ```text
 Alice → main.tex
@@ -817,10 +749,7 @@ Both contributors modify the same large file, increasing the likelihood of merge
 
 **Independent Editing**
 
-**Description:**
-Contributors should be able to modify their assigned components without unnecessarily affecting other components.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 A contributor can modify:
 
@@ -834,7 +763,7 @@ without modifying:
 chapters/introduction.tex
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 Changing one experiment subsection requires modifying a shared file containing the introduction, methodology, experiments, and conclusion.
 
@@ -842,10 +771,7 @@ Changing one experiment subsection requires modifying a shared file containing t
 
 **Shared Configuration Control**
 
-**Description:**
-Shared settings and configuration files should be clearly identified and managed carefully.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 The project has a central configuration file:
 
@@ -855,7 +781,7 @@ preamble.tex
 
 The team knows that changes to this file may affect the entire thesis.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 Each contributor independently modifies global formatting or package configuration inside their own chapter.
 
@@ -865,14 +791,9 @@ This can result in inconsistent document behavior and formatting.
 
 ### Debugging
 
-Debugging describes how easily errors can be identified, isolated, traced, and fixed.
-
 **Error Localization**
 
-**Description:**
-It should be possible to identify which file or component is responsible for an error.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 A LaTeX error is reported in:
 
@@ -882,7 +803,7 @@ chapters/methodology.tex
 
 The developer can immediately inspect the methodology module.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 A 5,000-line `main.tex` contains the entire thesis. An error occurs somewhere in the file, requiring a large amount of searching to locate the problem.
 
@@ -890,10 +811,7 @@ A 5,000-line `main.tex` contains the entire thesis. An error occurs somewhere in
 
 **Module Isolation**
 
-**Description:**
-Individual modules should be possible to examine, test, or temporarily isolate during troubleshooting.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 The project uses:
 
@@ -911,7 +829,7 @@ During development, a specific module can be selected using:
 
 This allows the developer to focus on one part of a large document.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 All content is embedded directly into one large `main.tex`, with no meaningful module boundaries that can be isolated during troubleshooting.
 
@@ -919,10 +837,7 @@ All content is embedded directly into one large `main.tex`, with no meaningful m
 
 **Dependency Traceability**
 
-**Description:**
-It should be possible to understand which files, commands, or configurations are related to an error.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 If `results.tex` uses:
 
@@ -946,7 +861,7 @@ results.tex
 preamble.tex
 ```
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 A command used in `results.tex` is defined inside another unrelated chapter file, such as `methodology.tex`.
 
@@ -956,10 +871,7 @@ The dependency is hidden and difficult to trace.
 
 **Failure Containment**
 
-**Description:**
-An error in one component should not unnecessarily make the entire project difficult to inspect or troubleshoot.
-
-Example that follows the criterion
+**Example that follows the criterion**
 
 A figure used only by the experiments chapter is invalid:
 
@@ -969,7 +881,7 @@ figures/experiments/result-01.pdf
 
 The developer can focus on the experiments module and the corresponding figure.
 
-Example that does not follow the criterion
+**Example that does not follow the criterion**
 
 A global macro in a large `main.tex` file causes many subsequent compilation errors across unrelated chapters.
 
